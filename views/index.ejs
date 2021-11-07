@@ -9,10 +9,10 @@
 </head>
 <body>
     <h1>
-        URL Shortner
+        <a href="/">URL Shortner</a>
     </h1>
     <form action="/api/url/shorten" method="post">
-        <label for="longUrl">Long url</label>
+        <label for="longUrl">What's the long url?</label>
         <input type="url" name="longUrl" id="longUrl">
         <input type="submit" name="submit">
     </form>
@@ -20,8 +20,16 @@
     <div class="output">
         <% if(urls.length > 0){ %>
             <% urls.forEach((url_object) => { %>
-                <p>Long URL: <%= url_object.longUrl %></p>
-                <p>Short URL: <%= url_object.shortUrl %></p>
+                <div class="url-combination">
+                    <div class="long url">
+                        <span>Long URL</span>
+                        <span><a href="<%= url_object.longUrl %>"><%= url_object.longUrl %></a></span>
+                    </div>
+                    <div class="short url">
+                        <span>Short URL</span>
+                        <span><a href="<%= url_object.shortUrl %>"><%= url_object.shortUrl %></a></span>
+                    </div>
+                </div>
             <% }) %>
         <% } else { %>
             <p>No urls found</p>
