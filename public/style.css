@@ -51,9 +51,40 @@ input[type=url] {
   border-radius: 0.5rem;
 }
 
+form div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+form div input {
+  width: 30%;
+  max-width: 11rem;
+  outline: none;
+  border: none;
+  padding: 0.4rem 0 0.4rem 0.7rem;
+  background-color: rgba(144, 190, 222, 0.4);
+  border-radius: 0.5rem;
+}
+
+#longUrl {
+  margin-bottom: 3rem;
+}
+
+.urlSlug {
+  margin-bottom: 1rem;
+}
+
 input[type=submit] {
   padding: 0.6rem 5rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
   border: none;
   border-radius: 0.4rem;
   background-color: #CCEEF7;
