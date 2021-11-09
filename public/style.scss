@@ -5,16 +5,23 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
-h1{
+h1, h4{
     display: flex;
     justify-content: center;
+}
+h4{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+h1{
+    font-size: 3rem;
     margin-top: 2rem;
 }
 body{
     background-color: #DFFDFF;
 }
 form{
-    margin-top: 2rem;
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     width: 100%;

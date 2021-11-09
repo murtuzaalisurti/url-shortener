@@ -7,13 +7,22 @@
   font-family: 'Poppins', sans-serif;
 }
 
-h1 {
+h1, h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+h4 {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3rem;
   margin-top: 2rem;
 }
 
@@ -22,7 +31,7 @@ body {
 }
 
 form {
-  margin-top: 2rem;
+  margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
