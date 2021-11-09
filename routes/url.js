@@ -10,6 +10,7 @@ const Url = require('../models/Url');
 //@desc create short URL
 router.post('/shorten', async (req, res) => {
     const { longUrl } = req.body;
+    const url_slug = req.body.urlSlug;
     const baseUrl = config.get('baseUrl');
 
     //check base url
@@ -35,11 +36,12 @@ router.post('/shorten', async (req, res) => {
                         console.log(err);
                     })
             } else {
-                const shortUrl = process.env.BASEURL + '/' + urlCode;
+                const shortUrl = process.env.BASEURL + '/' + url_slug;
                 url = new Url({
                     longUrl,
                     shortUrl,
-                    urlCode,
+                    // urlCode,
+                    urlCode: url_slug,
                     date: new Date()
                 })
 

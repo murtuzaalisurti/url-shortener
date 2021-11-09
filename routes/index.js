@@ -23,7 +23,11 @@ router.get('/', (req, res) => {
 
 router.get('/:code', async (req, res) => {
     try {
+        console.log(req.params.code);
+        // const url = await Url.findOne({urlCode: req.params.code});
+
         const url = await Url.findOne({urlCode: req.params.code});
+
         if(url){
             return res.redirect(url.longUrl);
         } else {
